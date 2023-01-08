@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //q1 is object
+    console.log('which more fast on add all is: object')
+    let obj = {};
+    const maxCount = 1000000;
+    console.time("My operation")// <---- Starts the timer
+    for (let i = 0; i < maxCount; i++) {
+        obj[i] = i++;
+    }
+    console.timeEnd("My operation") // <---- Stops the time
+
+    let obj2 = new Map();
+    console.time("My operation")// <---- Starts the timer
+    for (let i = 0; i < maxCount; i++) {
+        obj2.set(i, i++);
+    }
+    console.timeEnd("My operation") // <---- Stops the time
+    console.log('-----------------------')
+
+    //q2 is object
+    console.log('which more fast on find singel is: Map')
+    
+    console.time("My operation")// <---- Starts the timer
+    obj[100];
+    console.timeEnd("My operation") // <---- Stops the time
+
+    console.time("My operation")// <---- Starts the timer
+    obj2.get(100);
+    console.timeEnd("My operation") // <---- Stops the time
+    console.log('-----------------------')
+
+    //q3
+    console.log('which more fast on add singel is: Map')
+    console.time("My operation")// <---- Starts the timer
+    obj[1000001] = 1000001;
+    console.timeEnd("My operation") // <---- Stops the time
+
+    console.time("My operation")// <---- Starts the timer
+    obj2.set(1000001, 1000001);
+    console.timeEnd("My operation") // <---- Stops the time
+    console.log('-----------------------')
+
+    //q4
+    console.log('which more fast on delete singel is: Map')
+    console.time("My operation")// <---- Starts the timer
+    delete obj[1000001];
+    console.timeEnd("My operation") // <---- Stops the time
+
+    console.time("My operation")// <---- Starts the timer
+    obj2.delete(1000001, 1000001);
+    console.timeEnd("My operation") // <---- Stops the time
+    console.log('-----------------------')
+</script>
+
+</html>
