@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    let date = new Date();
+    let monthName = date.toLocaleString('default', { month: 'long' });
+    let dayName = date.toLocaleDateString('default', { weekday: 'long' });
+    let NumOfDayInMonth = date.toLocaleDateString('default', { day:"2-digit" });
+
+    let year = date.toLocaleString('default', { year: "numeric" });
+    let numOfDayInMonth = new Date(year, date.getMonth() + 1, 0).getDate();
+    console.log(monthName);
+    console.log(dayName);
+    console.log(year);
+    console.log(numOfDayInMonth);
+
+
+    function GetDATE(year,monthName,dayName,numOfDayInMonth,NumOfDayInMonth){
+        return `Today is ${dayName} the ${NumOfDayInMonth} of ${monthName} ${year},and the month has a ${numOfDayInMonth}`
+    }
+
+    console.log(GetDATE(year,monthName,dayName,numOfDayInMonth,NumOfDayInMonth))
+</script>
+
+</html>
