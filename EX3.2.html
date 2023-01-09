@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function welcome() {
+        let welcome = 'Welcome to Appleseeds Bootcamp!';
+        return welcome;
+    }
+    // to iife
+    const res = (function welcomeIIFE() {
+        return 'Welcome to Appleseeds Bootcamp!';
+    })();
+    console.log(res);
+    // --------------------------------------------------------------
+
+    function power(a) {
+        let myNumber = a;
+        let result = Math.pow(myNumber, 2);
+        return result;
+    }
+
+
+    const resP = (function powerIIFE(a) {
+        let myNumber = a;
+        let result = Math.pow(myNumber, 2);
+        return result;
+    })(10);
+    console.log(resP);
+
+    //  --------------------------------------------------------------
+
+    const squareRoot = a => Math.sqrt(a);
+
+    const resSquareRoot = (function squareRootIIFE(a) {
+        let myNumber = a;
+        let result = Math.sqrt(a);
+        return result;
+    })(10);
+    console.log(resSquareRoot);
+
+    //  --------------------------------------------------------------
+
+    const randomNumbers = (a, b) => Math.random() * (a - b) + b;
+
+    const resRandomNumbers = (function randomNumbersIIFE(a,b) {
+        let res = Math.random() * (a - b) + b;
+        return  res
+    })(10,5);
+    console.log(resRandomNumbers);
+
+
+</script>
+
+</html>
