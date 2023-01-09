@@ -11,80 +11,25 @@
 <body>
 
 </body>
-
 <script>
-    function averageTeam(a, b, c) {
-        let sum = a + b + c;
-        let avg = sum / 3;
-        return avg;
+    function fromTo(n) {
+        for (let i = 1; i <= n; i++) {
+            let str = i.toString();
+            if(i % 7 == 0 && str.includes(7))
+            {
+                console.log("BOOM-BOOM");
+            }
+            if(i % 7 == 0 && str.includes(7) == false)
+            {
+                console.log("BOOM");
+            }
+            else{
+                console.log(i);
+            }
+        }
     }
 
-    let teamOne = averageTeam(89, 120, 103);
-    let teamTwo = averageTeam(116, 94, 123);
-    console.log("Team One is: ", teamOne);
-    console.log("Team Two is: ", teamTwo);
-
-    if (teamOne > teamTwo) {
-        console.log("Team one win: ", teamOne);
-    }
-    else {
-        console.log("Team Two win: ", teamTwo);
-    }
-
-    // ------------------------Change winner---------------------------//
-
-    let teamOne2 = averageTeam(120, 120, 113);
-    let teamTwo2 = averageTeam(116, 94, 123);
-    console.log("Team One is: ", teamOne2);
-    console.log("Team Two is: ", teamTwo2);
-
-    if (teamOne2 > teamTwo2) {
-        console.log("Team one win: ", teamOne2);
-    }
-    else {
-        console.log("Team Two win: ", teamTwo2);
-    }
-
-    // ------------------------Team Mary---------------------------//
-
-    let TeamMary = averageTeam(97, 134, 105);
-    console.log("Team Mary is: ", TeamMary);
-
-    if (teamOne2 > teamTwo2 && teamOne2 > TeamMary) {
-        console.log("Team one win: ", teamOne2);
-    }
-    else if (teamTwo2 > teamOne2 && teamTwo2 > TeamMary) {
-        console.log("Team Two win: ", teamTwo2);
-    }
-    else {
-        console.log("Team Mary is Win: ", TeamMary);
-
-    }
-
-    // ------------------------Change winner2---------------------------//
-
-    let teamOne3 = averageTeam(120, 120, 113);
-    let teamTwo3 = averageTeam(120, 120, 113);
-    let TeamMary3 = averageTeam(120, 120, 113);
-
-    console.log("Team One is: ", teamOne2);
-    console.log("Team Two is: ", teamTwo2);
-    console.log("Team Mary is: ", TeamMary);
-
-
-    if (teamOne3 > teamTwo3 && teamOne3 > TeamMary3) {
-        console.log("Team one win: ", teamOne2);
-    }
-    else if (teamTwo3 > teamOne3 && teamTwo3 > TeamMary3) {
-        console.log("Team Two win: ", teamTwo2);
-    } else if (TeamMary3 > teamOne3 && teamTwo3 < TeamMary3) { 
-        console.log("Team Mary win: ", TeamMary);
-    }
-    else {
-        console.log("Teams is draws: ","Team Mary is: ", TeamMary3,"Team Two is: ",teamTwo3,"Team one",teamOne3);
-
-    }
-
+    fromTo(18);
 </script>
 
 </html>
