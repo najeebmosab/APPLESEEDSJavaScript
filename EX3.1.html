@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function welcomeD() {
+        let welcome = 'Welcome to Appleseeds Bootcamp!';
+        return welcome;
+    }
+
+    // to expression
+    const welcomeE = function () {
+        return 'Welcome to Appleseeds Bootcamp!';
+    }
+
+    // to Arrow
+    const welcomeA = () => 'Welcome to Appleseeds Bootcamp!';
+
+
+
+    // -----------------------------------------------------------------
+    function powerD(a) {
+        let myNumber = a;
+        let result = Math.pow(myNumber, 2);
+        return result;
+    }
+    // to expression
+
+    const powerE = function (a) {
+        let myNumber = a;
+        let result = Math.pow(myNumber, 2);
+        return result;
+    }
+
+    // to Arrow
+    const powerA = (a) => Math.pow(a, 2);
+
+
+
+    // -----------------------------------------------------------------
+    function addD(a, b = 5) {
+        let myNumber = a;
+        let sum = myNumber + b;
+        return sum;
+    }
+
+    // to expression
+    const addE = function (a, b = 5) {
+        let myNumber = a;
+        let sum = myNumber + b;
+        return sum;
+    }
+    
+    // to Arrow
+    const addA = (a, b = 5) => a + b;
+    
+    // -----------------------------------------------------------------
+    
+    
+    // From function expressions to function declarations
+    const helloA = () => "Hello!";
+    
+    // to declaration.
+    function helloD() {
+        return "Hello!";
+    }
+    
+    // to expression
+    const helloE = function () {
+        return "Hello!";
+    }
+
+    // -----------------------------------------------------------------
+
+    // to Arrow
+    const squareRootA = a => Math.sqrt(a);
+
+    // to declaration.
+    function squareRootD(a) {
+       return Math.sqrt(a);
+    }
+    
+    // to expression
+    const squareRootE = function (a) {
+        return Math.sqrt(a);
+    }
+
+    // -----------------------------------------------------------------
+
+    const randomNumbersA = (a, b) => Math.random() * (a - b) + b;
+
+
+     // to declaration.
+     function randomNumbersD(a,b) {
+       return Math.random() * (a - b) + b;
+    }
+    
+    // to expression
+    const randomNumbersE = function (a,b) {
+        return Math.random() * (a - b) + b;
+    }
+</script>
+
+</html>
