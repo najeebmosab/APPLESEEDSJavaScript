@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<!-- 7900 / 300 = res * 100%-->
+
+<script>
+
+    function Grade(par) {
+        if (par <=100 &&  par >=90) {
+            console.log("it's A:");
+        }
+        else if (par <=89 && par >=80) { console.log("it's B:"); }
+        else if (par <=79 && par >=70) { console.log("it's C:"); }
+        else if (par <=69 && par >=65) { console.log("it's D:"); }
+        else if (par <=64 && par >=0) { console.log("it's F:"); }
+
+        else {
+            console.log("'Please Enter Number btween 0 - 100");
+
+        }
+    }
+    Grade("0");
+    Grade("100");
+    Grade("80");
+
+</script>
+
+</html>
