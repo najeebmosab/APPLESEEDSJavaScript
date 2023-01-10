@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const people = ["Greg", "Mary", "Devon", "James"];
+    for (let i = 0; i < people.length; i++) {
+        console.log(people[i]);
+
+    }
+    console.log("-----------------------------------------------");
+    console.log("Afer remove Greg")
+    // to remove "Greg"
+    people.shift();
+    for (let i = 0; i < people.length; i++) {
+        console.log(people[i]);
+
+    }
+    console.log("-----------------------------------------------");
+    console.log("Afer remove James")
+    // to remove "James"
+    people.pop();
+    for (let i = 0; i < people.length; i++) {
+        console.log(people[i]);
+    }
+
+    console.log("-----------------------------------------------");
+    console.log("Afer add Matt")
+    // to add "Matt"
+    people.unshift("Matt");
+    for (let i = 0; i < people.length; i++) {
+        console.log(people[i]);
+    }
+
+    console.log("-----------------------------------------------");
+    console.log("Afer add my name")
+    // to add "my name"
+    people.push("mosab");
+    for (let i = 0; i < people.length; i++) {
+        console.log(people[i]);
+    }
+
+    console.log("-----------------------------------------------");
+    console.log("Afer point 6")
+    for (let i = 0; i < people.length; i++) {
+        console.log(people[i]);
+        if(people[i] == "Mary")
+        {
+            break;
+        }
+    }
+    console.log("-----------------------------------------------");
+    console.log("Afer indexOf")
+    console.log(people.indexOf("Mary"));
+    console.log(people.indexOf("Foo"));
+
+    console.log("-----------------------------------------------");
+    console.log("Afer splice")
+    people.shift();
+    people.pop();
+    people.splice(0,0,"Greg");
+    people.pop();
+    people.splice(2,0,"Elizabeth");
+    people.splice(3,0,"Artie");
+    people.splice(4,0,"James");
+    for (let i = 0; i < people.length; i++) {
+        console.log(people[i]);
+    }
+
+    console.log("-----------------------------------------------");
+    console.log("Afer whit Bob")
+    let withBob = people;
+    withBob.push("Bob");
+
+    for (let i = 0; i < withBob.length; i++) {
+        console.log(withBob[i]);
+    }
+</script>
+
+</html>
