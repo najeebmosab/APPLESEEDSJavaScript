@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const obj = {
+        fname: "mousab",
+        lname: "abo najeeb"
+    }
+
+    const arr = new Array(100);
+    console.log(arr.fill(obj));
+
+    const arr2 = Array.from("12");
+    console.log(arr2);
+
+    const fullName = Object.values(arr[0]);
+    console.log(fullName);
+
+    const ob = Object.assign({}, arr2);
+    console.log(ob);
+    console.log("if an array is an array", Array.isArray(arr))
+
+
+    //     Create a copy of an array that won’t affect the
+    // original array if modified
+    const notEffecrArr=[];
+    for (let i = 0; i < arr.length; i++) {
+        notEffecrArr.push(arr[i]);
+    }
+    notEffecrArr.push("100");
+    console.log(notEffecrArr);
+    console.log(arr);
+    // Create a copy of an array that will affect the original
+
+    const copyArr = arr;
+    copyArr.push("100");
+
+    console.log(copyArr);
+    console.log(arr);
+</script>
+
+</html>
