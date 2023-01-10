@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function countryToLiveIn(language, isIsland, population, country) {
+        if (language.toLowerCase() == 'english' && isIsland == false && population < 50) 
+        { 
+            console.log(`You should live in ${country}`);
+        }
+        else{
+            console.log(`${country} does not meet your criteria`);
+        }
+    }
+
+
+    countryToLiveIn('english',false,40,"uk");
+    countryToLiveIn('span',false,40,"span");
+    countryToLiveIn('germany',false,80,"germany");
+</script>
+
+</html>
