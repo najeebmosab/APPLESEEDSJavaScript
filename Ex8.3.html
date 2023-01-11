@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const bookOne = {
+        name: "asdasd",
+        author: "weqwe",
+        year: 1997
+    };
+
+    const bookTwo = {
+        name: "zxczxc",
+        author: "vbnvbn",
+        year: 1998
+    };
+
+    bookUtils = {
+        GetFirstPublished: function getFirstPublished(bookOne = readToBook1(), bookTwo = readToBook1()) {
+            if (bookOne.year > bookTwo.year) {
+                return bookTwo;
+            }
+            else {
+                return bookOne;
+            }
+
+        },
+        SetNewEdition: function setNewEdition(book, year) {
+            if(book.hasOwnProperty("latestEdition"))
+            {
+                book.latestEdition = year;
+            }
+            else{
+                book.latestEdition = new Date();
+            }
+
+            return book;
+        },
+        SetLanguage:function setLanguage(book,language){
+            book.language = language; 
+            return book
+        },
+
+        SetTranslation:function setTranslation(book,language,translete){
+            book.language = language; 
+            book.translete = translete; 
+            return book
+        },
+
+        SetPublisher:function setPublisher(book,name,location,publisher){
+            book.name = name; 
+            book.publisher = publisher; 
+            book.location = location; 
+            return book
+        },
+        IsSamePublisher:function isSamePublisher(bookOne,bookTwo){
+            if(bookOne.publisher === bookTwo.publisher && bookOne.location === bookTwo.location)
+            {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+    };
+
+    function readToBook1() {
+        return bookOne;
+    }
+    function readToBook2() {
+        return bookTwo;
+    }
+
+    console.log(bookUtils.SetNewEdition(readToBook1(),1999));
+    console.log(bookUtils.SetNewEdition(readToBook2(),1991));
+
+    console.log(bookUtils.SetLanguage(readToBook1(),"ar"));
+    console.log(bookUtils.SetLanguage(readToBook1(),"en"));
+
+
+    console.log(bookUtils.SetTranslation(readToBook1(),"en","ar"));
+
+
+    console.log(bookUtils.SetPublisher(readToBook1(),"kkjkk","asdasd","rrrrr"));
+    console.log(bookUtils.SetPublisher(readToBook2(),"kraad","asdasd","rrrrr"));
+
+    console.log(bookUtils.IsSamePublisher(readToBook2(),readToBook1()));
+    
+
+
+
+
+
+    // console.log(mycountry);
+    // function description(mycountry) {
+    //     console.log(`${mycountry.country} has ${mycountry.population} million people, their mother tongue is ${mycountry.language}, they have ${mycountry.neighbours.length} neighbouring countries and a capital called ${mycountry.capital}`);
+    // }
+    // description(mycountry);
+</script>
+
+</html>
