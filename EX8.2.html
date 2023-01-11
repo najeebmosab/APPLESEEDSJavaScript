@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const mycountry = {
+        country: "usa",
+        capital: "neweork",
+        language: "english",
+        population: 400,
+        neighbours: [
+            { name: "canada" },
+            { name: "makceco" },
+        ],
+        isIsland: function checkIsland() {
+            if (this.neighbours.length > 0) {
+                return false;
+
+            }
+            else {
+                return true;
+            }
+        }
+    }
+
+    console.log(mycountry);
+    function description(mycountry) {
+        console.log(`${mycountry.country} has ${mycountry.population} million people, their mother tongue is ${mycountry.language}, they have ${mycountry.neighbours.length} neighbouring countries and a capital called ${mycountry.capital}`);
+    }
+    description(mycountry);
+</script>
+
+</html>
