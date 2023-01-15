@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const food = ["Noodle", "Pasta","Ice-cream", "Ice-cream", "Meat", "Cucumber", "Olives"];
+    const food1 = ["Fries", "Ice-cream", "Pizza", "Olives", "Hamburgers"];
+
+    function Same(arrOne, arrTwo) {
+        const newArr = [];
+        debugger;
+        for (let i = 0; i < arrOne.length; i++) {
+            for (let j = 0; j < arrTwo.length; j++) {
+                if (arrOne[i] == arrTwo[j]) {
+                    if (!newArr.includes(arrOne[i])) {
+                        newArr.push(arrOne[i]);
+                    }
+                }
+            }
+        }
+
+        return newArr;
+    }
+
+    console.log(Same(food, food1));
+</script>
+
+</html>
