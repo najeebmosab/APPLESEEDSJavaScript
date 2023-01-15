@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const populations = [5000, 6000, 1200, 4000];
+
+
+    function populationPercentages(argument) {
+        const percentages = [];
+
+        for (let i = 0; i < populations.length; i++) {
+            const element = populations[i];
+            let avg = element / 7900;
+            percentages.push((avg * 100));
+        }
+        return percentages;
+    }
+
+    const res = populationPercentages(populations);
+
+    for (let i = 0; i < res.length; i++) {
+        console.log(res[i]);
+        
+    }
+
+</script>
+
+</html>

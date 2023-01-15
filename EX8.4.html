@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const array = ["Hello", "Good Day", "Your Welcome", "hotdog", "hamburgers"];
+
+    function CountArr(array) {
+        debugger;
+        const newObj = {};
+        for (let i = 0; i < array.length; i++) {
+            let word = array[i].toLowerCase();
+            for (let j = 0; j < word.length; j++) {
+                if (newObj.hasOwnProperty(word[j])) {
+                    newObj[word[j]]++;
+                    // console.log(newObj[word[j]]);
+                }
+                else{
+                    newObj[word[j]] = 1;
+                //    console.log(newObj[word[j]]);
+                }
+            }
+
+        }
+        return newObj;
+    }
+
+    console.log(CountArr(array));
+</script>
+
+</html>
