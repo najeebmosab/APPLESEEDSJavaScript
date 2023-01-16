@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const movies = [
+        {
+            name: 'The Shawshank Redemption',
+
+        },
+        {
+            name: 'The Godfather',
+
+        },
+        {
+            name: 'The Godfather: Part II',
+
+        },
+        {
+            name: 'The Dark Knight',
+
+        },
+        {
+            name: '12 Angry Men',
+
+        },
+        {
+            name: 'Schindler"s List',
+
+        },
+        {
+            name: 'Pulp Fiction',
+
+        }
+    ]
+
+    forLoopingMovie(movies);
+    function forLoopingMovie(params) {
+        const newArr =[];
+        params.forEach((element,index) => {
+            const obj ={};
+            
+            console.log(element["name"]);
+            obj.id = index+1;
+            obj.name = element["name"]
+            newArr[index] = obj;
+        });
+
+        console.log(newArr);
+        return newArr
+    }
+
+
+    function mapLoopingMovie(params) {
+        const newArr =[];
+        params.map((element,index) => {
+            const obj ={};
+            debugger;
+            console.log(element["name"]);
+            obj.id = index+1;
+            obj.name = element["name"]
+            newArr[index] = obj;
+        });
+
+        console.log(newArr);
+        return newArr
+    }
+
+
+    mapLoopingMovie(movies);
+</script>
+
+</html>
