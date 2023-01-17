@@ -14,9 +14,9 @@ const sumEven = nums.reduce((a,b)=>{
 },0);
 console.log(sumEven);
 
-const avg = nums.reduce((a,b)=>{
+const avg = nums.reduce((a,b,c)=>{
     debugger
-    return (a+b);
+     (a+b)/c;
 }) ;
 
 console.log(avg/nums.length);
