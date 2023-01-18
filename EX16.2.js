@@ -59,3 +59,21 @@ function test() {
     console.log(y);// log 100
 }
 test();
+
+
+// ----------------------- //
+function test() {
+    foo();
+    bar();// error we dont have a function in the name bar()
+    // Function defiened
+    // using function declaration
+    function foo() {
+        console.log('foo'); //log foo
+    }
+    // Function defined
+    // using function expression
+    var bar = function () {
+        console.log('bar'); // log bar
+    }
+}
+test();
