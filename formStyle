@@ -1,0 +1,58 @@
+.formDiv {
+    width: 60%;
+}
+
+header nav .firstSlice form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+    width: 100%;
+    position: relative;
+
+}
+
+header nav .firstSlice form select {
+    width: 60px;
+    padding: 5.5px;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+
+header nav .firstSlice form input {
+    width: 100%;
+    padding: 5px;
+    padding-left: 80px;
+}
+
+header nav .firstSlice form input:focus {
+    border: solid 3px #FEBD69;
+}
+
+header nav .firstSlice form i.fa-solid {
+    cursor: pointer;
+    position: absolute;
+    right: -2px;
+    padding: 7px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #febd69;
+}
+
+header nav .firstSlice form i.fa-solid:hover {
+    background-color: #f3a847;
+}
+/* html */
+
+<div class="formDiv">
+<form action="">                        
+    <select name="" id="choese">
+        <option value="">All Departments</option>
+        <option value="">Arts & Crafts</option>
+        <option value="">Automotive</option>
+    </select>
+    <input type="text">
+    <i class="fa-solid fa-magnifying-glass"></i>
+</form>
+</div>

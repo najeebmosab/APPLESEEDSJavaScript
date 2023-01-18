@@ -1,4 +1,4 @@
-const arr = [{ a: '1' }, { a: "2" }, { c: "3" }, { a: "4" }, { b: 1 }, { b: 2 }, { b: 3 }];
+const arr = [{ a: '1'}, { a: "2" }, { c: "3" }, { a: "4" }, { b: 1 }, { b: 2 }, { b: 3 }];
 
 
 function extractOnlyValue(arr, key) {
