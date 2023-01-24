@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 30%;
+        margin: 200px auto;
+    }
+
+    input {
+        width: 40px;
+    }
+</style>
+
+<body>
+    <div>
+        <input maxlength="1" type="text">
+        <input maxlength="1" type="text">
+        <input maxlength="1" type="text">
+        <input maxlength="1" type="text">
+        <input maxlength="1" type="text">
+        <input maxlength="1" type="text">
+    </div>
+</body>
+<script>
+    let inputs = document.querySelectorAll("input");
+    let div = document.getElementsByTagName("div");
+    function handleInput(params) {
+        console.log(params);
+        let input = params.target;
+        if (input.nextElementSibling && input.value ) {
+            input.nextElementSibling.focus();
+        }
+        
+        if (input.nextElementSibling == null) {
+            setTimeout(() => {
+                inputs.forEach((el, i) => { el.value = "" });
+            }, "1000")
+            
+        }
+        console.log(params.currentTarget);
+    }
+
+    function handlePaste(params) {
+        const pate = params.clipboardData.getData('text');
+        console.log(pate)
+        inputs.forEach((el, i) => { el.value = pate[i] });
+    }
+
+    inputs[0].addEventListener("paste", handlePaste);
+    div.item(0).addEventListener("input", handleInput);
+    //374928
+</script>
+
+</html>
