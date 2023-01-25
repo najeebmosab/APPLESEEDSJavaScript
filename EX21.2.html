@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>+</button>
+    <p>lorem</p>
+    <button>-</button>
+    
+</body>
+
+<script>
+    const Btn1 = document.getElementsByTagName("button").item(0);
+    const Btn2 = document.getElementsByTagName("button").item(1);
+    const p = document.querySelector("p");
+    Btn1.addEventListener("click",()=>{
+         const size = window.getComputedStyle(p).fontSize;
+         console.log(parseInt(size));
+         console.log(parseInt("100px"));
+        if (parseInt(size) < parseInt("100px")) {
+            const res = parseInt(size)+10;
+            p.style.fontSize =  res+"px";  
+            console.log(p.style.fontSize);
+        } 
+    });
+
+    Btn2.addEventListener("click",()=>{
+         const size = window.getComputedStyle(p).fontSize;
+         
+        if (parseInt(size) > parseInt("6px")) {
+            const res = parseInt(size)-10;
+            p.style.fontSize =  res+"px";  
+            console.log(p.style.fontSize);
+        } 
+    });
+</script>
+
+</html>
