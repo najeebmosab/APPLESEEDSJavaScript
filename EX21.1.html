@@ -7,26 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<input type="text">
+    <input type="text">
+    <button>Cilck</button>
+    <h6></h6>
 </body>
 <script>
     const input = document.querySelector("input");
-    input.addEventListener("input",(event)=>{
-        console.log(event.target.value);
-        const val = Number(event.target.value)
+    const btn =  document.querySelector("button");
+    const h6 =  document.querySelector("h6");
+
+    btn.addEventListener("click", () => {
+        
+        const val = Number(input.value);
         if (Number.isInteger(val)) {
             if (val > 18) {
+                h6.innerHTML="you can drink appear";
                 console.log("you can drink appear");
             }
-            else
-            {
+            else {
                 console.log("you’re too young");
+                h6.innerHTML="you’re too young";
+
             }
         }
-        else{
+        else {
             alert("please Enter a Number")
         }
     });
 </script>
+
 </html>
