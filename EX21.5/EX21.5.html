@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        display: flex;
+        align-items: center;
+
+    }
+    img{
+        width: 50px;
+
+    }
+</style>
+
+<body>
+    <div>
+        <input type="text">
+        <button>Click</button>
+    </div>
+    <div class="toFase">
+
+    </div>
+</body>
+<script>
+    const input = document.querySelector("input");
+    const button = document.querySelector("button");
+    const toFase = document.querySelector(".toFase");
+    
+    button.addEventListener("click", () => {
+        toFase.innerHTML="";
+        const len = Number(input.value);
+        if (Number.isInteger(len)) {
+            for (let i = 0; i < len; i++) {
+                const img = document.createElement("img");
+                img.setAttribute("src","./download (2).jfif");            
+                toFase.appendChild(img);
+            }
+        }
+        else {
+            alert("Please Enter a Number")
+        }
+
+    });
+
+</script>
+
+</html>
