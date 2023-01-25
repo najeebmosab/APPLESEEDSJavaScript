@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Why are you interested in this position?</h1>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div>
+            <button>Click Here</button>
+        </div>
+        <p></p>
+    </div>
+</body>
+
+<script>
+    const Btn = document.getElementsByTagName("button").item(0);
+    const TE = document.querySelector("textarea");
+    const p = document.querySelector("p");
+    Btn.addEventListener("click", (e) => {
+        const len = TE.value.length;
+        if (len < 100) {
+            alert("Please Enter More Than 100 characters");
+        }
+        else {
+            console.log(TE.value);
+            p.innerHTML=`${TE.value}`;
+        }
+    });
+
+
+</script>
+
+</html>
