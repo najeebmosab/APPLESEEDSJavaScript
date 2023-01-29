@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 90%;
+        margin: 0px auto;
+        background-color: #afd8e7;
+        text-align: center;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theChar {
+        padding: 10px;
+        border: solid 1px #000;
+        border-radius: 5px;
+        
+    }
+ 
+    button{
+        background-color: orange;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div>
+            <h2>
+                Welcome To Guess My Letter
+            </h2>
+        </div>
+        <div>
+            <div class="divChar">
+                <p class="theChar">
+                 ?
+                </p>
+            </div>
+            <p class="theRes"></p>
+        </div>
+        <div>
+            <h2>Would you like to play again</h2>
+            <button class="newGame">yes</button>
+        </div>
+        <div>
+            <h2>Keys Guessed</h2>
+            <p class="keysGuessed"></p>
+        </div>
+    </div>
+</body>
+<script>
+    const theRes = document.querySelector(".theRes");
+    const theChar = document.querySelector(".theChar");
+    const characters ='abcdefghijklmnopqrstuvwxyz';
+    const keysGuessed = document.querySelector(".keysGuessed");
+    const letter = characters.charAt(Math.floor(Math.random() * (26 - 1 + 1) + 1));
+    const newGame = document.querySelector(".newGame");
+    newGame.addEventListener("click",()=>{
+       window.location.reload();
+    });
+    console.log(letter);
+
+    window.addEventListener('keypress', function(event) {
+        console.log(event.key)
+    if(event.key == letter) {
+        theRes.innerHTML = "Right letter";
+        theRes.style.color="green";
+        theChar.innerHTML = letter;
+        keysGuessed.innerHTML+=event.key.toString()+','
+    }
+    else {
+        theRes.innerHTML = "Nope,wrong letter";
+        theRes.style.color="red";
+        keysGuessed.innerHTML+=event.key.toString()+','
+    }
+});
+</script>
+</html>
