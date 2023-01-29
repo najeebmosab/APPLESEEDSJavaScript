@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input id="name" type="text" name="" id="" placeholder="name">
+        <input id="email" type="email" name="" id="" placeholder="email">
+        <button id="submit">Submit</button>
+    </form>
+</body>
+<script>
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const button = document.querySelector("#submit");
+
+    button,addEventListener('click',()=>{
+        debugger;
+        if (name.value != '' &&name.value.length !=0 && email.value != "" &&email.value.length !=0) {
+            alert(`${name.value} \ln ${email.value}`);
+        }
+        else{
+            alert("please fill it");
+        }
+    });
+</script>
+</html>
