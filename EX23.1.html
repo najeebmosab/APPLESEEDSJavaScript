@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="element">lorem</div>
+</body>
+<script>
+    //will print a window
+    console.log(this);
+    // ------------------------------------------------- //
+
+    // print hellow timmy
+    // beacuse the arrow function it's searching a function to take a object 
+    // so i but a arrow function in normal function to return a object
+    const myObj = {
+        name: "Timmy",
+        greet: function () {
+            const g = () => {
+                console.log(`Hello ${this.name}`);
+            }
+            g();
+        },
+    };
+    myObj.greet();
+    // -------------------------------//
+
+    // print window
+    // beacuse this calling to function and we don't in a object so return a window
+    // but if function in a object it return a object;
+    const myFuncDec = function () {
+        console.log(this);
+    };
+    myFuncDec();
+    // ----------------------------------------- //
+
+    // print window
+    // beacuse the arrow function it's searching a function to take a object if not go to take a browsers
+    const myFuncArrow = () => {
+        console.log(this);
+    };
+    myFuncArrow();
+    // --------------------------------------------- //
+
+    // print window
+    // beacuse the arrow function it's searching a function to take a object if not go to take a browsers
+    document.querySelector('.element').addEventListener("mouseover", () => {
+        console.log(this);
+    });
+
+</script>
+
+</html>

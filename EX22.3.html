@@ -24,10 +24,10 @@
         padding: 10px;
         border: solid 1px #000;
         border-radius: 5px;
-        
+
     }
- 
-    button{
+
+    button {
         background-color: orange;
         color: #fff;
         padding: 10px;
@@ -47,7 +47,7 @@
         <div>
             <div class="divChar">
                 <p class="theChar">
-                 ?
+                    ?
                 </p>
             </div>
             <p class="theRes"></p>
@@ -65,28 +65,29 @@
 <script>
     const theRes = document.querySelector(".theRes");
     const theChar = document.querySelector(".theChar");
-    const characters ='abcdefghijklmnopqrstuvwxyz';
+    const characters = 'abcdefghijklmnopqrstuvwxyz';
     const keysGuessed = document.querySelector(".keysGuessed");
     const letter = characters.charAt(Math.floor(Math.random() * (26 - 1 + 1) + 1));
     const newGame = document.querySelector(".newGame");
-    newGame.addEventListener("click",()=>{
-       window.location.reload();
+    newGame.addEventListener("click", () => {
+        window.location.reload();
     });
     console.log(letter);
 
-    window.addEventListener('keypress', function(event) {
+    window.addEventListener('keypress', function (event) {
         console.log(event.key)
-    if(event.key == letter) {
-        theRes.innerHTML = "Right letter";
-        theRes.style.color="green";
-        theChar.innerHTML = letter;
-        keysGuessed.innerHTML+=event.key.toString()+','
-    }
-    else {
-        theRes.innerHTML = "Nope,wrong letter";
-        theRes.style.color="red";
-        keysGuessed.innerHTML+=event.key.toString()+','
-    }
-});
+        if (event.key == letter) {
+            theRes.innerHTML = "Right letter";
+            theRes.style.color = "green";
+            theChar.innerHTML = letter;
+            keysGuessed.innerHTML += event.key.toString() + ','
+        }
+        else {
+            theRes.innerHTML = "Nope,wrong letter";
+            theRes.style.color = "red";
+            keysGuessed.innerHTML += event.key.toString() + ','
+        }
+    });
 </script>
+
 </html>
